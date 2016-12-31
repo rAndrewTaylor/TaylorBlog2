@@ -11,8 +11,12 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 from mezzanine.utils.conf import real_project_name
+from whitenoise.django import DjangoWhiteNoise
+
+application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",
                       "%s.settings" % real_project_name("TaylorBlog"))
 
-application = get_wsgi_application()
+

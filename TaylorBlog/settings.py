@@ -4,6 +4,7 @@ import os
 
 from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
+import dj_database_url
 
 
 ######################
@@ -336,3 +337,12 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+
+DATABASES['default'] = dj_database_url.config()
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

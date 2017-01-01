@@ -121,6 +121,10 @@ LANGUAGES = (
 # production. Best set to ``True`` in local_settings.py
 DEBUG = False
 
+SECRET_KEY = "yr+5#ig+ndfzfxsa&=7x-*35osa_+svvw+s8&zfh&5d&p2w)+n"
+NEVERCACHE_KEY = "5y6=icg+v1n3uy&y&gw1l*tr69$%0b17qq70^sw%$zrx*02wqd"
+
+
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
@@ -146,8 +150,8 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
-        # DB name or path to database file if using sqlite3.
+        "ENGINE": "django.db.backends.sqlite3",
+        # DB name or path to databases file if using sqlite3.
         "NAME": "",
         # Not used with sqlite3.
         "USER": "",
@@ -339,10 +343,4 @@ else:
     set_dynamic_settings(globals())
 
 
-DATABASES['default'] = dj_database_url.config()
 
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass

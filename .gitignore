@@ -3,6 +3,6 @@
 *.db
 .DS_Store
 .coverage
-TaylorBlog/local_settings.py
+local_settings.py
 /static
 *.sqlite3

@@ -302,6 +302,8 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_GRAPPELLI,
 )
 
+DATABASES['default'] = dj_database_url.config()
+
 ##################
 # LOCAL SETTINGS #
 ##################
@@ -343,4 +345,3 @@ else:
     set_dynamic_settings(globals())
 
 
-# DATABASES['default'] = dj_database_url.config()

@@ -119,7 +119,7 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 SECRET_KEY = "yr+5#ig+ndfzfxsa&=7x-*35osa_+svvw+s8&zfh&5d&p2w)+n"
 NEVERCACHE_KEY = "5y6=icg+v1n3uy&y&gw1l*tr69$%0b17qq70^sw%$zrx*02wqd"

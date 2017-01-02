@@ -119,7 +119,7 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = True
+DEBUG = False
 
 SECRET_KEY = "yr+5#ig+ndfzfxsa&=7x-*35osa_+svvw+s8&zfh&5d&p2w)+n"
 NEVERCACHE_KEY = "5y6=icg+v1n3uy&y&gw1l*tr69$%0b17qq70^sw%$zrx*02wqd"
@@ -150,9 +150,9 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.",
         # DB name or path to databases file if using sqlite3.
-        "NAME": "dev.db",
+        "NAME": "",
         # Not used with sqlite3.
         "USER": "",
         # Not used with sqlite3.
